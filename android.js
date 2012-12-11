@@ -30,7 +30,7 @@ function loadPage(url) {
         }
         $('#container a').click(function(e){
             var url = e.target.href;
-            if (url.match(window.location.hostname)) {
+            if (url.indexOf('http')==-1) {
                 e.preventDefault();
                 loadPage(url);
             }
