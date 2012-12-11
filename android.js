@@ -24,7 +24,7 @@ function loadPage(url) {
         if (hist.length > 1) {
             $('#header').append('<div class="leftButton">'+hist[1].title+'</div>');
             $('#header .leftButton').click(function(){
-                $(e.target).addClass('clicked');
+                //$(e.target).addClass('clicked');
                 alert('clicked');
                 var thisPage = hist.shift();
                 var previousPage = hist.shift();
