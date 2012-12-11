@@ -3,6 +3,7 @@ $(document).ready(function(){
 });
 
 function loadPage(url) {
+    $('body').append('<div id="progress">Loading...</div>');
     if (url == undefined) {
         $('#container').load('home.html #header ul', hijackLinks);
     } else {
@@ -15,5 +16,6 @@ function hijackLinks() {
         e.preventDefault();
         loadPage(e.target.href);
     });
+    $('#progress').remove();
 }
 
