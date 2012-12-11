@@ -1,7 +1,7 @@
 /* pg-ajax phonegap example */
 
 var hist = [];
-var startUrl = 'index.html';
+var startUrl = 'home.html';
 $(document).ready(function(){
     loadPage(startUrl);
 });
