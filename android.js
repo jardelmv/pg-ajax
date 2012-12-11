@@ -15,7 +15,7 @@ function loadPage(url) {
 function hijackLinks() {
     $('#container a').click(function(e){
         var url = e.target.href;
-        if (url.match(window.location.hostname)) {
+        if (url.match('http')) {
             e.preventDefault();
             loadPage(url);
         }
