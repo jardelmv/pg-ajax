@@ -2,9 +2,11 @@
 
 var hist = [];
 var startUrl = 'home.html';
+
 $(document).ready(function(){
     loadPage(startUrl);
 });
+
 function loadPage(url) {
     $('body').append('<div id="progress">Loading...</div>');
     scrollTo(0,0);
@@ -18,19 +20,18 @@ function loadPage(url) {
         $('h1').html(title);
         $('h2').remove();
         $('.leftButton').remove();
+
         hist.unshift({'url':url, 'title':title});
-        alert(JSON.stringify(hist));
-        alert(hist.length);
         if (hist.length > 1) {
             $('#header').append('<div class="leftButton">'+hist[1].title+'</div>');
             $('#header .leftButton').click(function(){
                 //$(e.target).addClass('clicked');
-                alert('clicked');
                 var thisPage = hist.shift();
                 var previousPage = hist.shift();
                 loadPage(previousPage.url);
             });
         }
+
         $('#container a').click(function(e){
             var url = e.target.href;
             if (url.indexOf('http')==-1) {
