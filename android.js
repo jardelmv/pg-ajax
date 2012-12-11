@@ -19,11 +19,13 @@ function loadPage(url) {
         $('h2').remove();
         $('.leftButton').remove();
         hist.unshift({'url':url, 'title':title});
-        alert(hist);
+        alert(JSON.stringify(hist));
+        alert(hist.length);
         if (hist.length > 1) {
             $('#header').append('<div class="leftButton">'+hist[1].title+'</div>');
             $('#header .leftButton').click(function(){
                 $(e.target).addClass('clicked');
+                alert('clicked');
                 var thisPage = hist.shift();
                 var previousPage = hist.shift();
                 loadPage(previousPage.url);
