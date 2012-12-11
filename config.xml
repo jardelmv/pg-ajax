@@ -2,12 +2,12 @@
 <widget 
     xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id = "com.mamund.pg.styling"
+    id = "com.mamund.pg.ajax"
     version = "2.2.0">
     
-    <name>mamund: pg-styling</name>
+    <name>mamund: pg-ajax</name>
     <description>
-        Exercises in styleing a phonegap app for android
+        Exercises in using ajax in a phonegap app for android
     </description>                          
     <author
         href="http://mamund.com"
