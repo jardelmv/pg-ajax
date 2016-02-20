@@ -1,7 +1,7 @@
 /* pg-ajax phonegap example */
 
 var hist = [];
-var startUrl = 'home.html';
+var startUrl = 'http://54.207.66.247:5984/codecouros';
 
 $(document).ready(function(){
     loadPage(startUrl);
